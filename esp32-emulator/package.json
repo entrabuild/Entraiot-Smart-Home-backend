@@ -1,0 +1,18 @@
+{
+  "name": "entraiot-esp32-emulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Writes fake-but-realistic sensor/heartbeat data into Firebase exactly like a real ESP32 would, so the dashboard can be fully exercised before the physical device exists. Disable by not running it — the dashboard needs zero code changes when the real ESP32 takes over.",
+  "type": "commonjs",
+  "main": "emulator.js",
+  "scripts": {
+    "start": "node emulator.js",
+    "start:emulator-suite": "cross-env FIREBASE_DATABASE_EMULATOR_HOST=127.0.0.1:9000 FIREBASE_AUTH_EMULATOR_HOST=127.0.0.1:9099 node emulator.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.6.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

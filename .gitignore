@@ -1,0 +1,31 @@
+# Dependencies (everyone runs npm install themselves — never commit these)
+node_modules/
+**/node_modules/
+
+# Compiled TypeScript output
+functions/lib/
+
+# Firebase local files
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+ui-debug.log
+database-debug.log
+firestore-debug.log
+pubsub-debug.log
+
+# Secrets — NEVER commit these, no matter what
+.env
+.env.*
+!.env.production.example
+*.local
+serviceAccountKey.json
+*-firebase-adminsdk-*.json
+
+# Netlify function dependencies (installed via netlify/functions/package.json)
+netlify/functions/node_modules/
+
+# Editor/OS junk
+.vscode/
+.DS_Store
+Thumbs.db
